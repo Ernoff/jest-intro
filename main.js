@@ -20,15 +20,21 @@ exports.builder = {
   },
 };
 
+const getData = async ({id, name}) => {
+  const dataUrl = generateDataUrl(id, name);
+
+  const result = await fetch(dataUrl).then(r => r.json());
+  return result;
+};
+exports.getData = getData;
+
 exports.handler = async ({id, name}) => {
-const dataUrl = generateDataUrl(id, name);
 
-const result = await fetch(dataUrl).then(r => r.json());
-
-console.log(`Right Now ${chalk.bold('Gamescom Invitational Crate Costs')}: 
-  ${chalk.red("- Lowest price:")}  ${chalk.green(result.lowest_price)} 
-  ${chalk.red("- Median price:")}  ${chalk.blue(result.median_price)}
-  ${chalk.red("- Volume:")}        ${chalk.yellow(result.volume)}`);
+  const result = await getData({id, name});
+  console.log(`Right Now ${chalk.bold('Gamescom Invitational Crate Costs')}: 
+    ${chalk.red("- Lowest price:")}  ${chalk.green(result.lowest_price)} 
+    ${chalk.red("- Median price:")}  ${chalk.blue(result.median_price)}
+    ${chalk.red("- Volume:")}        ${chalk.yellow(result.volume)}`);
 
 const prompts = [
   {
