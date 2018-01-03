@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main function Get default data 1`] = `
+Object {
+  "lowest_price": "$7.25 USD",
+  "median_price": "$7.19 USD",
+  "success": true,
+  "volume": "8,080",
+}
+`;
