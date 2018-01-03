@@ -8,3 +8,25 @@ Object {
   "volume": "8,080",
 }
 `;
+
+exports[`Main function Open browser on user request 1`] = `
+Array [
+  Array [
+    "Right Now [1mGamescom Invitational Crate Costs[22m: 
+    [31m- Lowest price:[39m  [32m$7.25 USD[39m 
+    [31m- Median price:[39m  [34m$7.19 USD[39m
+    [31m- Volume:[39m        [33m8,080[39m",
+  ],
+]
+`;
+
+exports[`Main function Renders correct data to a User 1`] = `
+Array [
+  Array [
+    "Right Now [1mGamescom Invitational Crate Costs[22m: 
+    [31m- Lowest price:[39m  [32m$7.25 USD[39m 
+    [31m- Median price:[39m  [34m$7.19 USD[39m
+    [31m- Volume:[39m        [33m8,080[39m",
+  ],
+]
+`;
